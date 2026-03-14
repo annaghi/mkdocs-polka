@@ -1,6 +1,6 @@
 .PHONY: help
 .PHONY: build serve compile
-.PHONY: install reset upgrade clean
+.PHONY: install reset upgrade clean distclean
 .PHONY: fix
 
 .DEFAULT_GOAL := help
@@ -20,6 +20,7 @@ help:
 	@echo "  install         - Install complete development environment"
 	@echo "  reset           - Clean and reinitialize environment"
 	@echo "  clean           - Clean build artifacts"
+	@echo "  distclean       - Clean everything including virtual environment"
 	@echo "  upgrade         - Full upgrade cycle (clean + upgrade + reinstall)"
 
 
@@ -42,13 +43,12 @@ fix:
 
 clean:
 	@echo "Cleaning build artifacts and caches..."
-	rm -rf .venv
 	rm -rf .ruff_cache
 	rm -rf target
 	rm -rf site
 	rm -rf dist
-	rm uv.lock
-	rm Cargo.lock
+	rm -f uv.lock
+	rm -f Cargo.lock
 	find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
 	find . -type f -name "*.dll" -not -path "./.venv/*" -exec rm -f {} + 2>/dev/null || true
 	find . -type f -name "*.so" -not -path "./.venv/*" -exec rm -f {} + 2>/dev/null || true
@@ -56,6 +56,10 @@ clean:
 	find . -type f -name "*.pyo" -exec rm -f {} + 2>/dev/null || true
 	find . -type d -name "*.egg-info" -exec rm -rf {} + 2>/dev/null || true
 	@echo "Clean complete!"
+
+distclean: clean
+	rm -rf .venv
+	@echo "Full clean complete!"
 
 install:
 	@echo "Creating virtual environment..."
@@ -68,12 +72,15 @@ install:
 	uv run maturin develop
 	@echo "Install complete!"
 
-reset: clean install
+reset:
+	$(MAKE) distclean
+	$(MAKE) install
 	@echo "Environment reset complete!"
 
-upgrade: clean py-upgrade prek-upgrade install
+upgrade:
+	$(MAKE) clean
 	@echo "Upgrading Python dependencies..."
 	uv sync --upgrade --all-groups
-	@echo "Upgrading pre-commit hooks..."
 	uv run prek auto-update
+	uv run maturin develop
 	@echo "Upgrade complete!"
