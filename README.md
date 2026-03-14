@@ -1,9 +1,9 @@
 
 # MkDocs Polka
 
-MkDocs project demonstrating the [Polka]() crate.
+MkDocs project demonstrating the [Polka](https://github.com/annaghi/polka) crate.
 
-Polka is a markdown AST transforms via [markdown-it.rs](https://github.com/nickel-org/markdown-it.rs), exposed to Python through [PyO3](https://pyo3.rs/) / [maturin](https://www.maturin.rs/).
+Polka is a markdown AST transforms via [markdown-it Rust port](https://github.com/markdown-it-rust/markdown-it), exposed to Python through [PyO3](https://pyo3.rs/) / [maturin](https://www.maturin.rs/).
 
 ## Prerequisites
 

@@ -15,8 +15,8 @@ pedantic = { level = "warn", priority = -1 }
 
 [dependencies]
 markdown-it = "0.6.1"
-# polka = { git = "https://github.com/annaghi/polka.git", branch = "main" }
-polka = { path = "../polka" }
+polka = { git = "https://github.com/annaghi/polka.git", branch = "main" }
+# polka = { path = "../polka" }
 
 [dependencies.pyo3]
 version = "0.28.2"
