@@ -361,6 +361,7 @@ dependencies = [
 [[package]]
 name = "polka"
 version = "0.0.0"
+source = "git+https://github.com/annaghi/polka.git?branch=main#b6da6cf8b4ceee6a9e8b37b24768da37284b1288"
 dependencies = [
  "indexmap",
  "markdown-it",
