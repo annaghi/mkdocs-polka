@@ -1,0 +1,19 @@
+[data-md-color-scheme="default"] .md-typeset .grid.cards > ul > li.featured {
+    background-color: oklch(from var(--md-accent-fg-color) l c h / 0.05);
+    border-color: var(--md-accent-fg-color);
+
+    &:hover {
+        background-color: oklch(from var(--md-accent-fg-color) l c h / 0.08);
+        border-color: oklch(from var(--md-accent-fg-color) calc(l + 0.5) 0.1 h);
+    }
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li.featured {
+    background-color: oklch(from var(--md-accent-fg-color) l c h / 0.05);
+    border-color: var(--md-accent-fg-color);
+
+    &:hover {
+        background-color: oklch(from var(--md-accent-fg-color) l c h / 0.08);
+        border-color: oklch(from var(--md-accent-fg-color) calc(l - 0.5) c h);
+    }
+}

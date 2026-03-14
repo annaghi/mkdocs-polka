@@ -1,0 +1,2 @@
+[codespell]
+skip = "package-lock.json,overrides/assets/*,overrides/.icons/*,serve/assets/*,skin/assets/*,skin/.icons/*"

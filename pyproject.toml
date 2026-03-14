@@ -1,0 +1,21 @@
+[build-system]
+requires = ["maturin>=1.12.3,<2.0.0"]
+build-backend = "maturin"
+
+[project]
+name = "mkdocs-polka"
+requires-python = ">=3.12,<3.15"
+version = "0.0.0"
+
+[dependency-groups]
+mkdocs = ["mkdocs==1.6.1", "mkdocs-material>=9.7.5,<10.0.0"]
+dev = ["maturin>=1.12.6,<2.0.0", "prek>=0.3.5,<1.0.0"]
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+python-source = "python"
+
+[tool.uv]
+managed = true
+# https://github.com/squidfunk/mkdocs-material/issues/8478
+override-dependencies = ["click==8.2.1"]

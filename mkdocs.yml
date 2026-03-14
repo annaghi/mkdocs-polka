@@ -1,0 +1,42 @@
+# Project information
+site_name: MkDocs Polka
+site_url: http://localhost:8000
+dev_addr: localhost:8000
+site_description: >-
+  Write your documentation in Markdown and create a professional static site in
+  minutes – searchable, customizable, in 60+ languages, for all devices
+
+# Repository
+repo_name: annaghi/mkdocs-polka
+repo_url: https://github.com/annaghi/mkdocs-polka
+copyright: Copyright &copy; 2026 Anna Bansaghi
+
+# Configuration
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    - scheme: default
+      toggle:
+        icon: lucide/sun
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: lucide/moon-star
+        name: Switch to light mode
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+plugins:
+  - search
+
+hooks:
+  - python/hooks/hooks.py
+
+watch:
+  - docs
+  - overrides
+
+nav:
+  - Home: index.md

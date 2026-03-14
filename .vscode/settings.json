@@ -1,0 +1,45 @@
+{
+    "markdown.validate.fileLinks.enabled": "ignore",
+    "markdown.validate.referenceLinks.enabled": "ignore",
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "rust-analyzer.check.command": "clippy",
+    "[css][scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[editorconfig]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[ignore][properties]": {
+        "editor.defaultFormatter": "foxundermoon.shell-format",
+        "editor.formatOnSave": true
+    },
+    "[html][jinja-html][svg]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[json][jsonc][yaml][yml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "markdownlint.config": {
+        "default": false
+    },
+    "[markdown]": {
+        "editor.formatOnSave": false,
+        "editor.defaultFormatter": null
+    },
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true
+    },
+    "[toml]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    }
+}
