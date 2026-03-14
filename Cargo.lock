@@ -64,9 +64,9 @@ checksum = "5e764a1d40d510daf35e07be9eb06e75770908c27d411ee6c92109c9840eaaf7"
 
 [[package]]
 name = "cc"
-version = "1.2.56"
+version = "1.2.57"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "aebf35691d1bfb0ac386a69bac2fde4dd276fb618cf8bf4f5318fe285e821bb2"
+checksum = "7a0dd1ca384932ff3641c8718a02769f1698e7563dc6974ffd03346116310423"
 dependencies = [
  "find-msvc-tools",
  "shlex",
@@ -361,7 +361,7 @@ dependencies = [
 [[package]]
 name = "polka"
 version = "0.0.0"
-source = "git+https://github.com/annaghi/polka.git?branch=main#b6da6cf8b4ceee6a9e8b37b24768da37284b1288"
+source = "git+https://github.com/annaghi/polka.git?branch=main#7bc2f5275d17f8c5afc8a4b798902803e2d2305e"
 dependencies = [
  "indexmap",
  "markdown-it",
