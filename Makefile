@@ -45,8 +45,6 @@ clean:
 	rm -rf target
 	rm -rf site
 	rm -rf dist
-	rm -f uv.lock
-	rm -f Cargo.lock
 	find . -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null || true
 	find . -type f -name "*.dll" -not -path "./.venv/*" -exec rm -f {} + 2>/dev/null || true
 	find . -type f -name "*.so" -not -path "./.venv/*" -exec rm -f {} + 2>/dev/null || true
@@ -57,6 +55,8 @@ clean:
 
 distclean: clean
 	rm -rf .venv
+	rm -f uv.lock
+	rm -f Cargo.lock
 	@echo "Full clean complete!"
 
 install:
