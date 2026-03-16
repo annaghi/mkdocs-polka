@@ -5,7 +5,6 @@ Replaces MkDocs' built-in Markdown rendering with polka's
 attribute-aware HTML output.
 """
 
-import logging
 from pathlib import Path
 
 from mkdocs.config.defaults import MkDocsConfig
@@ -13,8 +12,6 @@ from mkdocs.structure.files import Files
 from mkdocs.structure.pages import Page
 
 from hooks import generate_html
-
-log = logging.getLogger("hooks")
 
 
 def on_page_markdown(markdown: str, *, page: Page, config: MkDocsConfig, files: Files) -> str:
