@@ -32,8 +32,10 @@ pub fn generate_html(filename: &str, content: &str, icon_dirs: Vec<String>) -> S
         && Path::new(filename).file_stem().is_some_and(|s| s == "index")
     {
         if let Ok(cwd) = std::env::current_dir() {
-            polka::set_debug(true, cwd.join(".debug"));
+            polka::set_debug(Some(cwd.join(".debug")));
         }
+    } else {
+        polka::set_debug(None);
     }
 
     let icon_dirs = icon_dirs.into_iter().map(PathBuf::from).collect();
