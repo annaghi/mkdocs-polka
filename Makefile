@@ -23,8 +23,6 @@ help:
 	@echo "  distclean       - Clean everything including virtual environment"
 	@echo "  upgrade         - Full upgrade cycle (clean + upgrade + reinstall)"
 
-
-
 build: compile
 	@echo "Building MkDocs site..."
 	uv run mkdocs build --strict
