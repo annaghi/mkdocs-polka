@@ -1,12 +1,12 @@
 [package]
-name = "hooks"
+name = "bridge"
 version = "0.0.0"
 edition = "2024"
 rust-version = "1.94"
 resolver = "3"
 
 [lib]
-name = "hooks"
+name = "bridge"
 crate-type = ["cdylib"]
 
 [lints.clippy]

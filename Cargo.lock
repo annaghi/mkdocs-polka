@@ -63,6 +63,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5e764a1d40d510daf35e07be9eb06e75770908c27d411ee6c92109c9840eaaf7"
 
 [[package]]
+name = "bridge"
+version = "0.0.0"
+dependencies = [
+ "markdown-it",
+ "polka",
+ "pyo3",
+]
+
+[[package]]
 name = "cc"
 version = "1.2.57"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -210,15 +219,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
 
 [[package]]
-name = "hooks"
-version = "0.0.0"
-dependencies = [
- "markdown-it",
- "polka",
- "pyo3",
-]
-
-[[package]]
 name = "html-escape"
 version = "0.2.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -361,7 +361,7 @@ dependencies = [
 [[package]]
 name = "polka"
 version = "0.0.0"
-source = "git+https://github.com/annaghi/polka.git?branch=main#1a28a2b1b360a7d39576b7f637ce9ea3fb3a60bd"
+source = "git+https://github.com/annaghi/polka.git?branch=main#10edec62cdc646c1b694e0eec628b87b5a1c739e"
 dependencies = [
  "indexmap",
  "markdown-it",
