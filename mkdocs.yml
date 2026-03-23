@@ -30,9 +30,7 @@ extra_css:
 
 plugins:
   - search
-
-hooks:
-  - python/hooks/hooks.py
+  - bridge
 
 watch:
   - docs

@@ -51,7 +51,7 @@ fn version() -> String {
 }
 
 #[pymodule]
-fn hooks(m: &Bound<'_, PyModule>) -> PyResult<()> {
+fn bridge(m: &Bound<'_, PyModule>) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(version, m)?)?;
     m.add_function(wrap_pyfunction!(generate_html, m)?)?;
     Ok(())
