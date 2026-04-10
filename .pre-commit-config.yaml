@@ -17,7 +17,7 @@ repos:
           - "--skip=overrides/.icons/*"
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.5
+    rev: v0.15.10
     hooks:
       - id: ruff-check
         args: [--fix, --show-fixes]

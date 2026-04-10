@@ -17,7 +17,7 @@
 
     [:octicons-arrow-right-24:{.twemoji} Getting started](#)
 
--  <{ .featured }
+-  :{ .featured }
 
    :fontawesome-brands-markdown:{ .twemoji .lg .middle } __It's just Markdown__
 

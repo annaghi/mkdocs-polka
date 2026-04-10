@@ -19,5 +19,5 @@ polka = { git = "https://github.com/annaghi/polka.git", branch = "main" }
 # polka = { path = "../polka" }
 
 [dependencies.pyo3]
-version = "0.28.2"
+version = "0.28.3"
 features = ["extension-module", "abi3-py312"]
